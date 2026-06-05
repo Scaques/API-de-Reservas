@@ -1,5 +1,0 @@
-com\portafolio\reservas\controller\ReservaController.class
-com\portafolio\reservas\model\Reserva.class
-com\portafolio\reservas\service\ReservaService.class
-com\portafolio\reservas\ReservasApiApplication.class
-com\portafolio\reservas\repository\ReservaRepository.class
