@@ -32,11 +32,10 @@ public class Reserva {
     @Column(nullable = false)
     private String estado;
     
-    // Constructor vacío (Obligatorio para JPA)
     public Reserva() {
     }
 
-    // Constructor completo
+    // Constructor
     public Reserva(Long id, String cliente, LocalDateTime fechaHora, String servicio, String estado) {
         this.id = id;
         this.cliente = cliente;
@@ -44,8 +43,6 @@ public class Reserva {
         this.servicio = servicio;
         this.estado = estado;
     }
-
-    // --- GETTERS Y SETTERS MANUALES ---
 
     public Long getId() {
         return id;

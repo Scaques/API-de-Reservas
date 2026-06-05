@@ -14,24 +14,24 @@ public class ReservaService {
     @Autowired
     private ReservaRepository reservaRepository;
 
-    // 1. Obtener todas las reservas
+    // Obtener reservas
     public List<Reserva> obtenerTodas() {
         return reservaRepository.findAll();
     }
 
-    // 2. Buscar una reserva por su ID
+    // Buscar reserva por ID
     public Optional<Reserva> obtenerPorId(Long id) {
         return reservaRepository.findById(id);
     }
 
-    // 3. Crear una nueva reserva (Lógica de negocio aplicada)
+    // Crear reserva nueva
     public Reserva crearReserva(Reserva reserva) {
         // Regla de negocio: Toda reserva nueva inicia en estado PENDIENTE
         reserva.setEstado("PENDIENTE");
         return reservaRepository.save(reserva);
     }
 
-    // 4. Actualizar el estado de una reserva existente
+    // Actualizar el estado de una reserva existente
     public Reserva actualizarEstado(Long id, String nuevoEstado) {
         Optional<Reserva> reservaExistente = reservaRepository.findById(id);
         
@@ -44,7 +44,7 @@ public class ReservaService {
         }
     }
 
-    // 5. Eliminar una reserva
+    // Eliminar una reserva
     public void eliminarReserva(Long id) {
         if (reservaRepository.existsById(id)) {
             reservaRepository.deleteById(id);

@@ -12,7 +12,7 @@ import java.util.List;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/api/reservas") // Ruta base de la API
+@RequestMapping("/api/reservas") // Ruta de la API
 public class ReservaController {
 
     @Autowired
